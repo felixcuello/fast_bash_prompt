@@ -4,7 +4,7 @@ function parse_git_branch() {
 	if [ ! "${BRANCH}" == "" ]
 	then
 		GIT_BRANCH=`echo ${BRANCH} | awk -F'/' '{ print $NF }'`
-		echo "[[1;33m${GIT_BRANCH}[m]"
+		echo "[[1;33m ${GIT_BRANCH}[m]"
 	else
 		echo ""
 	fi
