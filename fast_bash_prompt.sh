@@ -1,6 +1,6 @@
 # get current branch in git repo
 function parse_git_branch() {
-	BRANCH=`git symbolic-ref --short HEAD`
+	BRANCH=`git symbolic-ref --short HEAD | grep -v fatal`
 	if [ ! "${BRANCH}" == "" ]
 	then
 		GIT_BRANCH=`echo ${BRANCH} | awk -F'/' '{ print $NF }'`
